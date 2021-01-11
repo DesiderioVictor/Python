@@ -1,0 +1,93 @@
+# SEMANA 31/08 À 04/09
+
+Exercícios
+
+1 - Elaborar um programa que receba três números, calcule e mostre a multiplicação desses números.
+
+num1 = float(input("Digite o primeiro valor: "))
+num2 = float(input("Digite o segundo valor: "))
+num3 = float(input("Digite o terceiro valor: "))
+total = num1 * num2 * num3
+print ("O resultado da multiplicação dos três valores é: ", total)
+
+2 - Faça um programa que receba o preço de um produto, calcule e mostre o novo preço, sabendo-se que este sofreu um desconto de 10%.
+
+preco = float(input("Digite o valor do produto: "))
+desconto = preco - (preco *10/100)
+print ("O valor do produto com 10% de desconto é: ", desconto)
+
+3 - Escreva um programa que pede ao usuário para entrar com uma temperatura em graus Celsius, converter a temperatura para Fahrenheit e imprimir a temperatura convertida. Fórmula: (Celcius * 9/5) + 32.
+
+graus = float(input("Digite o valor da temperatura em graus Celsius: "))
+faren = graus *9/5+32
+print ("A temperatura em Fahrenheit é: ", faren)
+
+4 - Elabore um programa que simule uma agenda, solicite ao usuário que entre com o nome, endereço e telefone depois exiba os dados na tela.
+
+nome = input("Insira o nome: ")
+end = input("Insira o endereço: ")
+tel = input("Insira o telefone: ")
+print ("NOME: ", nome)
+print ("ENDEREÇO: ", end)
+print ("TELEFONE: ", tel)
+
+## EXERCICIOS DE VALIDAÇÃO DA ATIVIDADE:
+
+AV1 - Tendo como dado de entrada a altura (h) de uma pessoa, construa um algoritmo que calcule seu peso ideal, utilizando as seguintes fórmulas:
+Para homens: (72.7*h) - 58
+Para mulheres: (62.1*h) - 44.7
+
+h = float(input("Digite sua altura: ")) 
+
+ho = round((72.7 * h) - 58.2) 
+
+mu = round((62.1 * h) - 44.7, 2) 
+
+print("O peso ideal, conforme altura digitada, para homens é de", ho, "Kg e para mulheres", mu, "kg.")
+
+AV2 - Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês. Calcule e mostre o total do seu salário no referido mês.
+
+salHora = float(input("Informe o valor de seu salário por hora: "))
+totalHoras = float(input("Informe o total de horas trabalhadas no mês: "))
+print ("O total a receber este mês é de: R$",salHora * totalHoras)
+
+AV3 - Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês.
+(Utilize parte do código anterior) 
+Calcule e mostre o total do seu salário no referido mês, sabendo-se que são descontados 11% para o Imposto de Renda,
+8% para o INSS e 5% para o sindicato, faça um programa que nos dê:
+salário bruto.
+quanto pagou ao INSS.
+quanto pagou ao sindicato.
+o salário líquido.
+calcule os descontos e o salário líquido, conforme a tabela abaixo:
+    
+    + Salário Bruto : R$
+    - IR (11%) : R$
+    - INSS (8%) : R$
+    - Sindicato ( 5%) : R$
+    = Salário Liquido : R$                Obs.: Salário Bruto - Descontos = Salário Líquido.
+
+salHora = float(input("Informe o valor de seu salário por hora: "))
+totalHoras = float(input("Informe o total de horas trabalhadas no mês: "))
+
+salBru = salHora * totalHoras
+
+ir = (salBru * 11/100.0)
+inss = (salBru * 8/100.0)
+sindicato = (salBru * 5/100.0)
+
+valorT = ir + inss + sindicato
+salLiq = salBru - valorT
+
+print ("Seu salário bruto é R$", salBru)
+
+print ("Valor dos impostos: ")
+print ("IR: ", ir)
+print ("INSS: ", inss)
+print ("Sindicato: ", sindicato)
+
+print ("Seu salário líquido é de R$", salLiq)
+
+link para upload da atividade: http://bit.ly/IPE_atividade02_03-09-2020
+
+Envio até 04/09/2020
