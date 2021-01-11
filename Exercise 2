@@ -1,0 +1,55 @@
+<b> ATIVIDADE PRÁTICA IPE<b>
+
+Exercício 01:
+Desenvolva um programa que imprima em tela o seu nome complero e o seu RA
+
+Nome:
+Ra:
+
+print("Victor xxxxxx - RA: xxxx72")
+
+Exercício 02 
+Resolva as expressões matemáticas manualmente no caderno, após, converta as seguintes expressões
+matemáticas para que possam ser calculadas usando o interpretador Python (confirmando o resultado
+encontrado manualmente).
+
+a) 10 + 20 x 30
+b) 4ˆ2 ÷ 30ˆ
+c) (9ˆ4 + 2 ) x 6 – 1
+
+print(10+20*30)
+
+print(4**2/30)
+
+print(((9**4)+2)*(6-1))
+
+Exercício 03 
+Resolva as expressões matemáticas manualmente no caderno, após, digite a seguinte expressão no
+interpretador e confirme o resultado (Observe como a prioridade das operações é importante):
+
+10 % 3 * 10 ** 2 + 1 – 10 * 4 / 2
+
+print((10%3*10**2+1)-(10*4/2))
+
+Exercício 04 Escreva um programa que exiba o resultado de 2a x 3b, em que a vale 3 e b vale 5.
+
+a = 3 
+b = 5
+print((2*a)*(3*b))
+
+Exercício 05 
+Escreva um programa que calcule a soma de três variáveis e imprima o resultado na tela.
+
+var1 =int(input("Escreva o valor a: "))
+var2 =int(input("Escreva o valor b: "))
+var3 =int(input("Escreva o valor c: "))
+print("A soma entre os três valores é de: ", (var1 + var2 + var3))
+
+Exercício 06 Escreva o programa que receba o valor do salário, do aumento (%) e calcule o valor do novo salário.
+Considere o salário de R$ 750,00 e o aumento de 15%.
+
+sala =float(750.00)
+aume =float(15*750/100)
+
+print("O valor do salário com aumento é de: ", sala + aume)
+
