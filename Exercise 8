@@ -1,0 +1,190 @@
+# Lista de Exercício para serem resolvidos em AULA
+##     Atividade 08 - 08/10/2020
+
+1.	Solicite ao usuário números e os armazene em um vetor de N posições. Crie uma função que recebe o vetor preenchido e substitua todas as ocorrências de valores negativos por zero, ao final exiba os valores desse vetor.
+
+def altera(vetor):
+    for i in range(tam):
+        if vetor[i] < 0:
+            vetor[i] = 0
+    return vetor
+
+tam = int(input("Informe o tamanho do vetor: "))
+
+v = [0]*tam
+for i in range(tam):  
+    v[i] = int(input("Digite um valor: "))
+altera(v)
+
+
+2.	Faça um programa em Python que receba uma lista e exiba os elementos da última metade caso a quantidade de elementos seja par. Se a quantidade for ímpar, exiba a primeira metade, inclusive o valor do meio.
+
+tam = int(input('Digite a quantidade de elementos da lista: '))
+
+lista = [0] * tam
+
+for i in range(0, tam):
+    lista[i] = int(input('Digite um número:'))
+
+metade = tam/2 
+
+if tam % 2 == 0:
+    print('------PAR------')
+    for i in range(round(metade), tam):
+        print(lista[i])
+else:
+    print('------IMPAR------')
+    for i in range(0, round(metade)):
+        print(lista[i])
+
+3. Faça um programa que leia duas matrizes A e B 2x2 de inteiros e imprima a matriz C que é a soma das matrizes A e B
+
+m1 = m2 = m3 = []
+
+def soma_matrizes(m1, m2):
+    soma = []
+    for i in range(0,2):
+        linha = []
+        soma.append(linha)
+        for j in range(0,2):
+            celula = (m1[i][j]) + (m2[i][j])
+            linha.append(celula)
+    return soma
+
+print('------MATRIZ 1------')
+for i in range(0,2):
+    linha = []
+    for j in range(0,2):
+        linha.append(int(input('Digite um número para a matriz 1: ')))
+    m1.append(linha)
+    
+
+print('------MATRIZ 2------')
+for i in range(0,2):
+    linha = []
+    for j in range(0,2):
+        linha.append(int(input('Digite um número para a matriz 2: ')))
+    m2.append(linha)
+    
+print('------MATRIZ 3------')
+soma = soma_matrizes(m1, m2)    
+print(soma)
+
+
+4.	Escreva um programa em Python que leia duas matrizes A e B de tamanho 3 x 3 e calcule C = A×B. Ao final, o programa deverá imprimir a matriz antes e depois da multiplicação
+
+import numpy as npy
+
+m1 = m2 = m3 = npy.zeros((3,3), dtype = npy.int)
+
+for i in range(len(m1)):
+    for j in range(len(m1[0])):
+        m1[i,j] = int(input('Digite um número: '))
+        
+for i in range(len(m2)):
+    for j in range(len(m2[0])):
+        m2[i,j] = int(input('Digite um número: '))
+        
+for i in range(len(m3)):
+    for j in range(len(m3[0])):
+        m3[i,j] = m1[i,j] * m2[i,j]
+        
+
+
+
+5.	Faça um programa em Python que solicite ao usuário números e os armazene em uma matriz 3×3. Em seguida, crie um vetor que armazene os elementos da diagonal principal da matriz
+
+m1 = []
+    
+print('------MATRIZ 1------')
+for i in range(0,3):
+    linha = []
+    for j in range(0,3):
+        linha.append(int(input('Digite os números da matriz: ')))
+    m1.append(linha)
+    print(m1)
+
+## Lista de Exercício para ENTREGA
+### Atividade 07
+### DATA DE ENTREGA: 14/10/2020, até às 23h59min
+
+#### Exercícios 6 e 7 são para entrega!
+
+Entrega individual!
+
+Endereço: https://tinyurl.com/y4zqh95p
+
+
+
+6.	Escreva um programa em Python para imprimir uma matriz de tamanho 10 x 10, onde seus elementos são da forma abaixo:
+
+     * A[i][j] = 2 ∗ i + 7 ∗ j, se i < j;
+
+     * A[i][j] = 3 ∗ i<sup>2</sup> + 7 ∗ j, se i = j;
+
+     * A[i][j] = 4 ∗ i3 + 5 ∗ j2, se i > j;
+
+
+A = []
+for i in range (10):
+    A.append([0]*10)
+for i in range (10):
+    for j in range(10):
+        if i<j:
+            A[i][j] = 2*(i+1)+7*(j+1)
+        elif i>j:
+            A[i][j] = 4*(i+1)**3+5*(j+1)**2
+        else:
+            A[i][j] = 3*(i+1)**2+7*(j+1)
+for i in range (len(A)):
+    print(A[i])
+
+7.	Utilizando listas faça um programa que faça 5 perguntas para uma pessoa sobre um crime. As perguntas são:
+
+     * "Telefonou para a vítima?"
+     * "Esteve no local do crime?"
+     * "Mora perto da vítima?"
+     * "Tinha dívidas com a vítima?"
+     * "Já trabalhou com a vítima?“
+
+O programa deve no final emitir uma classificação sobre a participação da pessoa no crime.  Se a pessoa responder positivamente a:
+
+     * Duas questões ela deve ser classificada como: "Suspeita“; 
+     * Três e Quatro como "Cúmplice" e; 
+     * Cinco como "Assassino". Caso contrário, ele será classificado como "Inocente".
+
+
+quest = [
+        'Telefonou para a vítima? [S] ou [N]:',
+         'Esteve no local do crime? [S] ou [N]:',
+         'Mora perto da vítima? [S] ou [N]:',
+         'Tinha dívidas com a vítima? [S] ou [N]:',
+         'Já trabalhou com a vítima? [S] ou [N]:'
+        ]
+
+cont = 0
+for i in quest:
+    resp = input(i)
+    while ((resp != 'S') and (resp != 's') and (resp != 'n') and (resp != 'N')):
+        resp = input('Resposta inválida. Por favor digite [S] ou [N]: ')
+    if ( (resp == 'S') or (resp == 's')):
+        cont += 1
+        
+if(cont == 5):
+    print('ASSASSINO!')
+elif( (cont == 3) or (cont == 4)):
+    print('Cúmplice!.')
+elif(cont == 2):
+    print('Suspeito(a).')
+else:
+    print('Inocente.')
+
+##### Faça o download do seu arquivo IPYNB, e envie no link abaixo. 
+
+Endereço: https://tinyurl.com/y4zqh95p
+
+Entrega até 14/10/2020, até as 23h59min
+
+Faça o download do seu arquivo IPYNB, e envie no link acima. 
+
+Salve com o seguinte padrão NOMECOMPLETO_RA e envie no link acima.
