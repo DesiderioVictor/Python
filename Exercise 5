@@ -1,0 +1,171 @@
+# Lista de Exercício para serem resolvidos em AULA
+##     Atividade 04 – 17/09/2020
+
+
+1.	O Sr. Manoel Joaquim expandiu seus negócios para além dos negócios de 1,99 e agora possui uma loja de conveniências. Faça um programa que implemente uma caixa registradora rudimentar. O programa deverá receber um número desconhecido de valores referentes aos preços das mercadorias. Um valor zero deve ser informado pelo operador para indicar o final da compra. O programa deve então mostrar o total da compra e perguntar o valor em dinheiro que o cliente forneceu, para então calcular e mostrar o valor do troco. Após esta operação, o programa deverá voltar ao ponto inicial, para registrar a próxima compra. A saída deve ser conforme o exemplo abaixo:
+
+    Lojas Tabajara
+    
+    Produto 1: R$ 2.20
+    
+    Produto 2: R$ 6.80
+    
+    Produto 3: R$ 0
+    
+    Total: R$ 9.00
+    
+    Dinheiro: R$ 20.00
+    
+    Troco: R$ 11.00
+    
+    ...
+
+prod = 1
+soma = 0
+i = 1
+print("Lojas Tabajara\n")
+
+while (prod != 0):
+    prod = float(input("Produto {0}: ".format(i)))
+    soma = soma + prod
+    i += 1
+
+din = float(input("Valor em dinheiro: "))
+troco = din - soma
+print("Total: ", soma)
+print("Dinheiro: ", din)   
+print("Troco: ", troco)
+
+2. Faça um programa que imprima uma tabuada qualquer: de Y x 1 até Y x 10.	
+
+cont = 1
+
+tab = int(input("Digite um valor para tabuada: "))
+while (cont <= 10):
+    print (tab, "X", cont, "=", tab*cont)
+    cont = cont + 1    
+
+## 3. Elabore um programa para ler números e imprimir o triplo de cada número. Em seguida perguntar ao usuário se deseja continuar (S) ou não (N).
+
+resp = "s"
+while (resp == "s"):
+   num = int(input("Digite um número: "))
+   resultado = num * 3
+   print("O triplo do número é: ", resultado)
+   resp = input("Deseja continuar? Digite 'S' para sim e 'N' para não: ")
+    
+
+4.	Faça um programa que some dois números e questione se deseja continuar a operação. 
+
+resp = "s"
+while (resp == "s"):
+    n1 = int(input("Digite um número: "))
+    
+    n2 = int(input("Digite outro número: "))
+    
+    total = n1  + n2
+    
+    print("A soma dos números é: ", total)
+
+    resp = (input("Deseja fazer novamente? Se sim digite 'S'. "))
+
+5.	Faça um programa que peça um numero inteiro positivo e em seguida mostre este numero invertido
+Exemplo:
+
+Entrada: 12345
+
+Saída: 54321
+
+    n = input("Digite um valor: ")
+    print(''. join(reversed(n)))
+
+num = str(input("Informe um número inteiro positivo: "))
+lista = []
+
+for i in num:
+    lista.append(i)
+
+for x in lista[::-1]:
+    print(x, end="")
+
+
+
+6. Imprima uma tabela de conversão de polegadas para centímetros, de 1 a 20. Considere que POLEGADA = Centímetro * 2,54. Para encerrar as conversões um negativo deverá ser informado. 
+
+
+
+### Lista de Exercício para ENTREGA
+### Atividade 04
+### DATA DE ENTREGA: 23/09/2020, até às 23h59min
+
+#### Exercícios 7, 8 e 9 são para entrega!
+
+Entrega individual!
+
+Endereço: http://bit.ly/IPE_Atividade04_17-09-2020
+
+
+
+7. A série de Fibonacci é formada pela seqüência 1,1,2,3,5,8,13,21,34,55,...  Faça um programa capaz de gerar a série até o n−ésimo termo.
+
+n1 = int(input("Digite o n-ésimo termo: "))
+
+ult = 1
+penult = 1
+
+if (n1==1) or (n1==2):
+    print("1")
+else:
+    cont=3
+    while cont <= n1:
+        termo = ult + penult
+        penult = ult
+        ult = termo
+        cont += 1
+    print(termo)
+
+8.	Elabore um programa que entre com a idade de várias pessoas, calcule e mostre a idade média, mostre o número de indivíduos pesquisados e o indivíduo mais velho e o mais novo.
+
+idades = []
+uma_idade_qualquer = 1
+while uma_idade_qualquer:
+  uma_idade_qualquer = int(input("Digite uma idade ou 0 para terminar"))
+  if uma_idade_qualquer:
+     idades.append(uma_idade_qualquer)
+print("Eis as idades digitadas: ")
+print(idades)
+print("A idade média é: ",sum(idades)/len(idades)) 
+        
+        #print("A idade média é: ", soma/i)
+        # print("O número de indivíduos pesquisados é ", indpesq)
+       # print("O indivíduo mais novo é ", ind_novo, " enquanto que o mais velho: ", ind_velho)
+
+### 9.	Elabore um programa que apresente quatro opções: (1) consulta saldo, (2) saque, (3) depósito e (4) sair. O saldo deve iniciar em R$ 0,00. A cada saque ou depósito o valor do saldo deve ser atualizado.
+
+saldo = 0.00
+resp = "N"
+while(resp=="N"):
+    n1=int(input("Deseja: (1) consultar saldo, (2) saque, (3) depósito ou (4) sair? "))
+    if (n1==1):
+        print(saldo)
+    elif(n1==2):
+        n2 = float(input("Saque um valor: "))
+        if(saldo<=0):
+            print("Conta bancária zerada ou indisponível!")
+        else:
+            saldo = saldo - n2
+    elif(n1==3):
+        n3 = float(input("Adicione um valor: "))
+        saldo = saldo + n3
+    if(n1==4):
+        resp = input("Deseja sair? S/N ")
+
+Faça o download do seu arquivo IPYNB, e envie no link abaixo. 
+
+Endereço: http://bit.ly/IPE_Atividade04_17-09-2020
+
+Entrega até 23/09/2020
+
+Faça o download do seu arquivo IPYNB, e envie no link acima. 
+
+Salve com o seguinte padrão NOMECOMPLETO_RA e envie no link acima.
