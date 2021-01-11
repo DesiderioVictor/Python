@@ -1,0 +1,55 @@
+# AULA 09 SOLUÇÃO
+
+# 1. Elabore um programa que entre com uma frase e uma letra para contar, em seguida calcule e mostre quantas vezes a letra aparece na frase.
+
+frase = input("Digite uma frase: ")
+letra = input("Informe a letra a ser procurada: ")
+total = 0
+
+for x in frase:
+    if(x.upper() == letra.upper()):
+        total += 1
+letra = letra.upper()
+print("A letra {0} aparece {1} vez(es) na frase.".format(letra,total))
+
+6. - Elabore um programa que solicite ao usuário um nome de fruta, na sequência verifique se a fruta existe
+dentro do arquivo que criamos. Caso a fruta exista, exiba a mensagem “Parabéns, você acertou a
+fruta”, caso contrário exiba a mensagem “Desculpe, você não acertou a fruta”.
+
+fruit = input("Escolha uma fruta que você ache que esteja na lista: ")
+arquivo = open ('Palavra.txt', 'r')
+for linha in arquivo: 
+    linha = linha.rstrip()
+    if fruit == linha:
+        print("Parabéns, você acertou a fruta")
+        break
+    else:
+        print("Desculpe, você errou a fruta")
+        break
+arquivo.close()
+
+7. - Faça um programa que receba do usuário um arquivo texto e mostre na tela quantas letras são vogais
+e quantas são consoantes.
+
+user = open("user.txt", "w")
+user.write(input("Insira uma frase: "))
+user.close()
+
+vog = 0
+cons = 0
+conversor = ''
+
+user = open("user.txt", "r")
+for linha in user: 
+    conversor += linha
+conversor = conversor.lower()
+user.close()
+
+for letra in conversor:
+    if letra == 'a' or letra == 'e' or letra == 'i' or letra == 'o' or letra == 'u' in conversor:
+        vog += 1
+    elif letra == ' ' or letra == ',' or letra == '.' or letra == "'":
+        exluir = 0      
+    else:
+        cons += 1 
+print("Existem {0} Vogais e {1} Consoantes na frase.".format(vog,cons))
