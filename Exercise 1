@@ -1,0 +1,27 @@
+print("Hello world!")
+# comentário
+
+x = 5
+y = 7.0
+print(x, y)
+
+x = "Cachorro"
+y = "Gato"
+print(x, y)
+
+nome = input("Digite seu nome: ")
+print("O nome informardo foi: " + nome)
+
+nome = input("Digite seu nome: ")
+x = " é uma linda(o)"
+print("A " + nome + x)
+
+a = 10
+b = 20
+c = a
+a = b
+b = c
+
+print(a,b)
+
+
