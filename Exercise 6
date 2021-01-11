@@ -1,0 +1,162 @@
+# Lista de Exercício para serem resolvidos em AULA
+##     Atividade 06 - 24/09/2020
+
+
+1.	Faça um programa que leia um nº inteiro e mostre uma mensagem indicando se este número é positivo ou negativo.
+
+n = int(input("Digite um número inteiro: "))
+if(n<0):
+    print("Número negativo.")
+else:
+    print("Número positivo.")
+
+2. Faça um programa para ler um número do usuário e determinar se este número é par ou ímpar.
+
+n = int(input("Digite um valor inteiro: "))
+if(n%2)==0:
+    print("Este número é par.")
+else:
+    print("Este número é ímpar.")
+
+3. Faça um programa que recebe um símbolo de operação do usuário (+, -, / ou *) e dois números reais. O programa deve retornar o resultado da operação recebida sobre estes dois números.
+
+simb_op = input("Informe um símbolo de operação (exemplo: *, /, -, +): ")
+n1 = float(input("Digite o primeiro valor: "))
+n2 = float(input("Digite o segundo valor: "))
+if (simb_op == "*"):
+    print("O resultado da operação é: ", n1*n2)
+if(simb_op == "-"):
+    print("O resultado da operação é: ", n1-n2)
+if(simb_op == "+"):
+    print("O resultado da operação é: ", n1+n2)
+if(simb_op == "/"):
+    print("O resultado da operação é: ", n1/n2)
+
+0
+# 4.	Elabore um programa que leia duas notas de prova, calcule a média aritmética e caso o resultado seja maior ou igual a sete exiba a mensagem aprovado, caso contrário exiba a mensagem reprovado.
+
+nota1 = int(input("Digite a primeira nota: "))
+nota2 = int(input("Digite a segunda nota: "))
+media = (nota1 + nota2) / 2
+if(media >= 7):
+    print("Aluno aprovado.")
+else:
+    print("Aluno reprovado.")
+
+5. Elabore um programa que receba 2 valores numéricos, utilize o try e except para que o programa trate entradas não numérica amigavelmente imprimindo uma mensagem e finalizando o programa, conforme exemplos abaixo:
+Digite as Horas: 20
+Digite a Taxa: nove
+Erro, por favor, informe entrada numérica
+Digite as Horas: quarenta
+Erro, por favor, informe entrada numérica
+
+try :
+    int(input("Digite as horas: "))
+    int(input("Digite a taxa: "))
+    
+except:print("Erro, digite novamente uma entrada numérica.")
+    
+
+
+6. Elabore um programa para ler a base e altura de um triângulo e imprimir a área deste triângulo. Durante a preparação dos dados para este algoritmo, é possível que se cometa um erro e entrem valores negativos para a base ou para a altura. Isto é indesejável, pois a área impressa poderá ser negativa. Prever no algoritmo a possibilidade de verificar valores negativos na entrada. Se um valor negativo é encontrado, imprimir uma mensagem identificando este valor como base ou altura. Sabe-se que: área = (base*altura )/2.
+
+base = int(input("Digite a base do triângulo: "))
+altura = int(input("Digite a altura do triângulo: "))
+area = (base*altura)/2
+if(base <= 0) or (altura <= 0):
+    print("Digite um valor positivo.")
+else:
+    print("A àrea deste triângulo é: ", area)    
+
+### Lista de Exercício para ENTREGA
+### Atividade 05
+### DATA DE ENTREGA: 30/09/2020, até às 23h59min
+
+#### Exercícios 7, 8 e 9 são para entrega!
+
+Entrega individual!
+
+Endereço: http://bit.ly/IPE_Atividade05_24-09-2020
+
+
+
+#### Os arquivos devem OBRIGATORIAMENTE ser enviado pelo e-mail institucional @aluno.unip.br
+
+ 
+
+
+7. Faça um programa que lê 3 valores inteiros A, B,C e exiba os valores na tela. A seguir, encontre o maior e o menor dos 3 valores.
+
+a = int(input("Digite o primeiro valor: "))
+b = int(input("Digite o segundo valor: "))
+c = int(input("Digite o terceiro valor: "))
+
+print("Os valores inseridos foram: ",a, ",",b, "e",c, ".")
+if(a>b) and (b>c):
+    print("O maior valor é ", a, " e o menor é ", c)
+if(b>a) and (a>c):
+    print("O maior valor é ", b, " e o menor é ", c)
+if(c>a) and (a>b):
+    print("O maior valor é ", c, " e o menor é ", b)
+if(a>b) and (a>c) and (c>b):
+    print("O maior valor é ", a, " e o menor valor é ", b)
+if(b>a)and(b>c)and(c>a):
+    print("O maior valor é ", b, " e o menor é ", a)
+if(c>b)and(b>a):
+    print("O maior valor é ", c, " e o menor é ", a)
+
+8.	Elabore um programa para solicitar uma pontuação entre 0.0 e 1.0. Se o resultado estiver fora da faixa, imprimir uma mensagem de erro. Se a pontuação estiver entre 0.0 e 1.0, imprimir a nota utilizando a seguinte tabela:
+
+PONTO     | NOTA
+
+. > = 0,9 | A
+
+. > = 0,8 | B
+
+. > = 0,7 | C
+
+. > = 0,6 | D
+
+. <    0,6 | F
+
+nota = float(input("Favor digite a pontuação entre 0.0 e 1.0: "))
+if (nota <=1) and (nota >=0):
+    if (nota >= 0.9):
+        print("Parabéns! Nota A.")
+    elif (nota >= 0.8):
+        print("Foi bem! Nota B.")
+    elif (nota >= 0.7):
+        print("Pode melhorar. Nota C.")
+    elif (nota >= 0.6):
+        print("Precisa melhorar. Nota D.")
+    elif (nota < 0.6):
+        print("Tente de novo na próxima. Nota F.")
+if (nota >1.0) or (nota <0.0):
+    print("Erro! Favor digite uma pontuação válida.")
+
+9.	Tendo como dados de entrada a altura e o sexo de uma pessoa (?M? masculino e ?F? feminino), construa um programa que calcule seu peso ideal, utilizando as seguintes fórmulas: 
+a)	para homens: (72.7*h)-58
+b)	para mulheres: (62.1*h)-44.7
+
+alt = float(input("Favor digite sua altura: "))
+sex = input("Favor digite seu sexo. [M] ou [F]: ")
+if (sex == "M") or (sex == "m"):
+    peso = (72.7*alt)-58
+    print("Seu peso ideal é ", peso, "Kg.")
+if (sex == "F") or (sex == "f"):
+    peso = (62.1*alt)-44.7
+    print("Seu peso ideal é: ", peso, "Kg.")
+else:
+    print("Erro! Favor escreva somente [M] ou [F].")
+
+Faça o download do seu arquivo IPYNB, e envie no link abaixo. 
+
+Endereço: http://bit.ly/IPE_Atividade05_24-09-2020
+
+Entrega até 30/09/2020
+
+Faça o download do seu arquivo IPYNB, e envie no link acima. 
+
+Salve com o seguinte padrão NOMECOMPLETO_RA e envie no link acima.
+
+#### Os arquivos devem OBRIGATORIAMENTE ser enviado pelo e-mail institucional @aluno.unip.br
