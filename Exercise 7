@@ -1,0 +1,99 @@
+# Lista de Exercício para serem resolvidos em AULA
+##     Atividade 07 - 01/10/2020
+
+Interpolação de Strings
+•	%s: string;
+•	%d: inteiro;
+•	%o: octal;
+•	%x: hexacimal;
+•	%f: real;
+•	%e: real exponencial;
+•	%%: sinal de percentagem. 
+
+1.	Solicite ao usuário uma string qualquer e retorne o tamanho (quantidade de caracteres) do texto digitado. 
+
+texto = "Hello world!"
+print("O tamanho do texto %s é de %d caracteres"%(texto, len(texto)))
+
+2. Solicite ao usuário para informar a hora e os minutos, na saída se os valores informados não tiverem dois digitos, exibi-los com dois dígitos
+
+hora = int(input("Favor digite as horas: "))
+minutos = int(input("Favor digite os minutos: "))
+print("São %02d horas e %02d minutos." %(hora, minutos))
+
+3. Imprimir somente o terceiro caracter de uma palavra que o usuário digitar
+
+texto = input("Digite algo: ")
+print(texto[2])
+
+4. Imprimir o mesmo texto somente até o terceiro caractere
+
+texto = input("Digite algo: ")
+print(texto[:3])
+
+5. Imprimir o mesmo texto a partir do terceiro caractere
+
+texto = input("Digite algo: ")
+print(texto[2:])
+
+6. Solicite ao usuário um texto e exiba em ordem invertida
+
+texto = input("Digite algo: ")
+print(texto[::-1])
+
+7. Solicite ao usuário números e os armazene em um vetor de N posições. Crie uma função que imprima o vetor preenchido.
+
+tam = int(input("Favor insira o tamanho do vetor: "))
+
+vet = [0]
+
+### Lista de Exercício para ENTREGA
+### Atividade 06
+### DATA DE ENTREGA: 07/10/2020, até às 23h59min
+
+#### Exercícios 8, 9 e 10 são para entrega!
+
+Entrega individual!
+
+Endereço: http://bit.ly/IPE_Atividade06_01-10-2020
+
+
+
+8. Elabore um programa que entre com uma frase e uma letra para contar, em seguida calcule e mostre quantas vezes a letra aparece na frase
+
+texto = input("Digite um texto : ")
+letra = input("Informe uma letra: ")
+print("A quantidade de letras", letra,"encontras é: ", texto.count(letra))
+
+9.	Elabore um programa para entrar com uma frase ou palavra e uma letra, em seguida verifique se a frase ou palavra tem a letra informada. Obs: Não utilize estrutura de repetição.
+
+texto = input('Digite uma frase ou palavra: ')
+letra = input('Digite a letra que deseja buscar: ')
+
+if (texto.find(letra) >= 0):
+    print(texto, 'possui a letra', letra)
+else:
+    print(texto, 'não possui a letra', letra)
+
+10. Solicite ao usuário números e os armazene em um vetor de N posições. Crie uma função que recebe o vetor preenchido e substitua todas as ocorrências de valores negativos por zero, ao final exiba os valores desse vetor.
+
+n = int(input("Insira o tamanho do vetor: "))
+ 
+vet = [0]*n
+for i in range(0,n):
+    vet[i] = int(input('Digite um valor: '))
+    if vet[i] < 0:
+        vet[i] = 0
+print (vet)
+
+##### Faça o download do seu arquivo IPYNB, e envie no link abaixo. 
+
+Endereço: http://bit.ly/IPE_Atividade06_01-10-2020
+
+Entrega até 07/10/2020, até as 23h59min
+
+Faça o download do seu arquivo IPYNB, e envie no link acima. 
+
+Salve com o seguinte padrão NOMECOMPLETO_RA e envie no link acima.
+
+
