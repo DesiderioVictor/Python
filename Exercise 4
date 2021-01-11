@@ -1,0 +1,108 @@
+# Lista de Exercício para serem resolvidos em AULA
+##     Atividade 03 – 10/09/2020
+
+
+1.	Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem crescente.
+
+for x in range(1,11):
+    print(x)
+
+2.	Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem decrescente.
+
+for x in range(10, 0, -1):
+    print(x)
+
+3.	Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive) e N (inclusive). Considere que o N será sempre maior que ZERO.
+
+n = int(input("Digite um valor qualquer: "))
+while n <= 0 :
+    n = int(input("Digite um valor qualquer: "))
+        
+for i in range(1, n+1):
+    print(i)
+
+4.	Escreva um algoritmo para ler 10 números e ao final da leitura escrever a soma total dos 10 números lidos.
+
+soma= 0
+for i in range(1,4):
+    n1 = int(input("Digite um valor: "))
+soma = soma+n1
+print(soma)
+
+ 5.	Escreva um algoritmo que calcule e imprima a tabuada do 8 (1 a 10).
+
+i = 1
+while(i < 11):
+    print("8 x", i, "=", 8 * i)
+    i +=1 #i++ ou i = i +1
+
+for i in range(1,11):
+    print("8 x ", i, "=", 8 * i)
+
+6.	Escreva um algoritmo para ler 10 números. Todos os números lidos com valor inferior a 40 devem ser somados. Escreva o valor final da soma efetuada.
+
+soma = 0
+for x in range (1,5):
+    n1 = int(input("Coloque um valor: "))
+    if(n1 < 40):
+        soma= soma+n1 #soma += n1
+print("A soma dos valores menores que 40 é: ", soma)
+
+### Lista de Exercício para ENTREGA
+### Atividade 03
+### DATA DE ENTREGA: 16/09/2020, até às 23h59min
+
+#### Exercícios 7, 8 e 9 são para entrega!
+
+Entrega individual!
+
+Endereço: http://bit.ly/IPE_Atividade03_10-09-2020
+
+
+
+7.	Ler 10 valores e escrever quantos desses valores lidos estão no intervalo entre 10 e20 (incluindo os valores 10 e 20 no intervalo) e quantos deles estão fora deste intervalo.
+
+positivo = 0
+
+negativo = 0
+
+
+for x in range (1,11):
+    N1 = int(input("Informe um valor: ")) 
+    if (N1 >= 10 and N1 <= 20): 
+        positivo = positivo + 1     
+    else: 
+        negativo = negativo + 1 
+
+print("Entre um intervalo de 10 a 20 há: ", positivo,"números.") 
+
+print("Fora de um intervalo entre 10 e 20 há: ", negativo,"números.") 
+
+8.	Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100 (inclusive).
+
+i = 0
+for x in range(15, 101):
+    i += x
+    medAri = i/(101-15)
+print("A média aritmética dos valores inteiros entre 15 e 100 é: ", medAri)
+    
+
+9.	Ler um valor inteiro (aceitar somente valores entre 1 e 10) e escrever a tabuada de 1 a 10 do valor lido.
+
+x = int(input("Escreva um valor entre 1 e 10: "))
+
+while(x>=11 or x<=0):
+    
+    x = int(input("Favor digite um número entre 1 e 10: "))  
+            
+for i in range (1,11):
+            
+    print(x,"x", i , " = ", x * i)
+
+Copiar seu arquivo DOC para o endereço:
+
+Endereço: http://bit.ly/IPE_Atividade03_10-09-2020
+
+Entrega até 16/09/2020
+
+Copie suas soluções em um arquivo DOC, salve com o seguinte padrão e envie no link acima.
